@@ -19,7 +19,7 @@ langchain
 langchain-core
 langchain-community
 langchain-mistralai        # LangChain wrapper for Mistral API
-mistralai==0.4.2                  # Official Mistral Python client
+mistralai                  # Official Mistral Python client
 
 # ── RAG Pipeline ──────────────────────────────────────────────────────────────
 chromadb                   # Local vector store
