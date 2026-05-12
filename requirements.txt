@@ -46,3 +46,8 @@ requests
 python-dotenv
 
 langchain-chroma
+
+# ── API Server ────────────────────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+gunicorn>=22.0.0
