@@ -3,10 +3,10 @@ pydub==0.25.1
 ffmpeg-python
 
 openai-whisper
-torch==2.2.2
-numpy==1.26.4
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 torchaudio
-
+numpy==1.26.4
 deep-translator
 
 langchain
@@ -30,7 +30,6 @@ reportlab
 fpdf2
 
 python-dotenv
-numpy<2
 tqdm
 requests
 
