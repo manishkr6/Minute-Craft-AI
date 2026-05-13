@@ -1,10 +1,10 @@
 yt-dlp
-pydub
+pydub==0.25.1
 ffmpeg-python
 
 openai-whisper
-torch
-torchaudio
+torch==2.2.2
+torchaudio==2.2.2
 
 deep-translator
 
@@ -21,7 +21,7 @@ huggingface-hub
 tiktoken
 langchain-chroma
 
-streamlit
+streamlit==1.35.0
 streamlit-extras
 watchdog
 
@@ -29,7 +29,7 @@ reportlab
 fpdf2
 
 python-dotenv
-numpy
+numpy<2
 tqdm
 requests
 
