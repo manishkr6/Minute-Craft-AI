@@ -4,8 +4,8 @@ ffmpeg-python
 
 openai-whisper
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchaudio
+torch==2.2.2+cpu
+torchaudio==2.2.2+cpu
 numpy==1.26.4
 deep-translator
 
@@ -31,8 +31,4 @@ fpdf2
 
 python-dotenv
 tqdm
-requests
-
-fastapi>=0.115.0
-uvicorn[standard]>=0.30.0
-gunicorn>=22.0.0
+requests
