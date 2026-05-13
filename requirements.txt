@@ -3,8 +3,8 @@ pydub==0.25.1
 ffmpeg-python
 
 openai-whisper
-torch==2.2.2
-torchaudio==2.2.2
+torch
+torchaudio
 
 deep-translator
 
