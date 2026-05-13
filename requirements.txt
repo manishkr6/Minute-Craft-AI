@@ -1,11 +1,12 @@
 yt-dlp
 pydub==0.25.1
 ffmpeg-python
+python-3.10.13
 
 openai-whisper
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.12.0+cpu
-torchaudio==2.12.0+cpu
+torch==2.1.2
+torchaudio==2.1.2
 numpy==1.26.4
 deep-translator
 
@@ -31,4 +32,4 @@ fpdf2
 
 python-dotenv
 tqdm
-requests
+requests
