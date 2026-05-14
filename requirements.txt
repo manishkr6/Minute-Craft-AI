@@ -23,6 +23,7 @@ mistralai                  # Official Mistral Python client
 
 # ── RAG Pipeline ──────────────────────────────────────────────────────────────
 chromadb                   # Local vector store
+langchain-chroma           # LangChain integration for ChromaDB
 sentence-transformers      # HuggingFace embedding models
 langchain-huggingface      # LangChain ↔ HuggingFace embeddings bridge
 huggingface-hub            # Model downloading from HuggingFace Hub
