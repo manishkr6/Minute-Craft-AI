@@ -9,6 +9,7 @@ ffmpeg-python            # FFmpeg bindings (FFmpeg binary must be installed sepa
 # ── Speech-to-Text (local Whisper) ────────────────────────────────────────────
 openai-whisper          # OpenAI Whisper (runs locally)
 torch                      # PyTorch backend for Whisper
+torchvision                # Required by some PyTorch models
 torchaudio                 # Audio utilities for PyTorch
 
 # ── Translation (Hindi → English) ─────────────────────────────────────────────
