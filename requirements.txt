@@ -2,7 +2,6 @@
 
 # ── Audio / Video acquisition ─────────────────────────────────────────────────
 yt-dlp>=2026.3.17      # Download audio from YouTube URLs
-curl-cffi               # Required by yt-dlp for browser impersonation (bypassing 403)
 pydub                     # Audio file manipulation / format conversion
 audioop-lts                         # Drop-in replacement for audioop (removed in Python 3.13)
 ffmpeg-python            # FFmpeg bindings (FFmpeg binary must be installed separately)
