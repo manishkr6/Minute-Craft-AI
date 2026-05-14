@@ -5,14 +5,29 @@ import os
 DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "downloads")
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
+import streamlit as st
+
 def download_youtube_audio(url :str) ->str:
     output_path = os.path.join(DOWNLOAD_DIR, "%(title)s.%(ext)s")
+    
+    # Securely load cookies from Streamlit secrets if available
+    cookie_path = None
+    try:
+        if "YOUTUBE_COOKIES" in st.secrets:
+            cookie_path = os.path.join(DOWNLOAD_DIR, "cookies.txt")
+            with open(cookie_path, "w") as f:
+                f.write(st.secrets["YOUTUBE_COOKIES"])
+    except Exception:
+        pass # Not running in Streamlit or no secrets
+
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": output_path, 
         "extractor_args": {
-            "youtube": {"player_client": ["web_embedded", "tv", "default"]}
+            "youtube": {"player_client": ["default", "-android", "-ios"]}
         },
+        "impersonate": "chrome",
+        "cachedir": False,
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
@@ -22,6 +37,10 @@ def download_youtube_audio(url :str) ->str:
         ],
         "quiet": True,
     }
+    
+    if cookie_path:
+        ydl_opts["cookiefile"] = cookie_path
+
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
         filename = ydl.prepare_filename(info).replace(".webm", ".wav").replace(".m4a", ".wav")
